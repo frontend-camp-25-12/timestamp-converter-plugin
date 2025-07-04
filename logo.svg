@@ -1,0 +1,31 @@
+<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- 背景圆形 -->
+  <circle cx="32" cy="32" r="30" fill="#4A90E2" stroke="#2E5C8A" stroke-width="2"/>
+  
+  <!-- 时钟表盘 -->
+  <circle cx="32" cy="32" r="24" fill="#FFFFFF" stroke="#4A90E2" stroke-width="1.5"/>
+  
+  <!-- 时钟刻度 -->
+  <g stroke="#4A90E2" stroke-width="1">
+    <!-- 12点 -->
+    <line x1="32" y1="10" x2="32" y2="14"/>
+    <!-- 3点 -->
+    <line x1="54" y1="32" x2="50" y2="32"/>
+    <!-- 6点 -->
+    <line x1="32" y1="54" x2="32" y2="50"/>
+    <!-- 9点 -->
+    <line x1="10" y1="32" x2="14" y2="32"/>
+  </g>
+  
+  <!-- 时针指向10点 -->
+  <line x1="32" y1="32" x2="26" y2="20" stroke="#2E5C8A" stroke-width="2.5" stroke-linecap="round"/>
+  
+  <!-- 分针指向2点 -->
+  <line x1="32" y1="32" x2="42" y2="18" stroke="#2E5C8A" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- 中心点 -->
+  <circle cx="32" cy="32" r="2" fill="#2E5C8A"/>
+  
+  <!-- 数字显示 -->
+  <text x="32" y="46" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#4A90E2">TS</text>
+</svg>

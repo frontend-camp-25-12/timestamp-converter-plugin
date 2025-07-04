@@ -1,0 +1,62 @@
+{
+  "id": "timestamp.converter",
+  "name": "时间戳转换器",
+  "description": "支持时间戳与日期时间的双向转换，支持多时区显示",
+  "version": "2.0.2",
+  "logo": "./logo.svg",
+  "i18n": {
+    "en": {
+      "name": "Timestamp Converter",
+      "description": "Convert timestamp to datetime and vice versa, with multi-timezone support"
+    }
+  },
+  "window": {
+    "width": 650,
+    "height": 550,
+    "frame": true,
+    "transparent": false,
+    "disableTransition": false
+  },
+  "features": [
+    {
+      "code": "convert",
+      "label": "时间戳转换",
+      "searchable": true,
+      "hotKey": true,
+      "i18n": {
+        "en": {
+          "label": "Convert Timestamp"
+        }
+      },
+      "cmds": [
+        "时间戳",
+        "timestamp",
+        "时间转换",
+        "unix",
+        "时间戳转换",
+        "ts",
+        {
+          "type": "regex",
+          "match": "\\d{10,13}"
+        }
+      ]
+    },
+    {
+      "code": "currentTime",
+      "label": "获取当前时间戳",
+      "searchable": true,
+      "hotKey": true,
+      "i18n": {
+        "en": {
+          "label": "Get Current Timestamp"
+        }
+      },
+      "cmds": [
+        "当前时间",
+        "现在",
+        "now",
+        "current"
+      ]
+    }
+  ]
+}

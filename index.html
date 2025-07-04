@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>时间戳转换器</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>⏰ 时间戳转换器</h1>
+            <p class="subtitle">支持时间戳与日期时间的双向转换</p>
+        </header>
+
+        <!-- 时间戳转换区域 -->
+        <section class="section">
+            <h2>🔄 时间戳转换</h2>
+            <div class="input-group">
+                <input 
+                    type="text" 
+                    id="timestampInput" 
+                    placeholder="请输入时间戳"
+                    class="input-field"
+                >
+                <select id="timestampUnit" class="select-field">
+                    <option value="ms">毫秒 (ms)</option>
+                    <option value="s">秒 (s)</option>
+                </select>
+                <button id="convertBtn" class="btn btn-primary">转换</button>
+            </div>
+            <div class="button-group">
+                <button id="currentTimeBtn" class="btn btn-secondary">获取当前时间戳</button>
+                <button id="clearBtn" class="btn btn-outline">清空</button>
+            </div>
+        </section>
+
+        <!-- 时区选择 -->
+        <section class="section">
+            <h2>🌍 时区选择</h2>
+            <select id="timezoneSelect" class="select-field">
+                <!-- 通过 JavaScript 动态填充 -->
+            </select>
+        </section>
+
+        <!-- 转换结果显示 -->
+        <section class="section">
+            <h2>📅 转换结果</h2>
+            <div id="result" class="result-container">                <div class="result-grid">
+                    <div class="result-item">
+                        <span class="result-label">标准格式:</span>
+                        <span id="standardFormat" class="result-value">-</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">日期:</span>
+                        <span id="dateFormat" class="result-value">-</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">时间:</span>
+                        <span id="timeFormat" class="result-value">-</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">星期:</span>
+                        <span id="weekdayFormat" class="result-value">-</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">ISO格式:</span>
+                        <span id="isoFormat" class="result-value">-</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 反向转换 -->
+        <section class="section">
+            <h2>📆 日期时间转时间戳</h2>
+            <div class="input-group">
+                <input 
+                    type="datetime-local" 
+                    id="datetimeInput"
+                    class="input-field"
+                >
+                <button id="reverseConvertBtn" class="btn btn-primary">转为时间戳</button>
+            </div>
+            <div id="reverseResult" class="reverse-result hidden">                <div class="result-grid">
+                    <div class="result-item">
+                        <span class="result-label">毫秒时间戳:</span>
+                        <span id="msTimestamp" class="result-value"></span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">秒时间戳:</span>
+                        <span id="sTimestamp" class="result-value"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 设置区域 -->
+        <section class="section">
+            <h2>⚙️ 设置</h2>
+            <div class="setting-group">
+                <button id="hotkeySettingsBtn" class="btn btn-secondary">
+                    ⌨️ 设置全局快捷键
+                </button>
+                <p class="setting-desc">设置快捷键后，可在任何地方快速打开时间戳转换器</p>
+            </div>
+        </section>
+
+        <!-- 状态提示 -->
+        <div id="toast" class="toast hidden">
+            <span id="toastMessage"></span>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
